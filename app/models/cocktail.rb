@@ -1,5 +1,6 @@
 class Cocktail < ActiveRecord::Base
-  has_many :dose, through: :dose
+  has_many  :ingredients, through: :dose
   validates :description, confirmation: true
-  validates presence: true
+  validates :name, confirmation: true, presence: true
+  validates allow_blank: false
 end

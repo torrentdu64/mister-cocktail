@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
-  get 'pages/cocktail'
 
-  get 'pages/dose'
-
-  get 'pages/ingredient'
+  get 'cocktails/cocktail'
 
   root "pages#home"
-   resources :cocktail
+  resources :cocktail, only: [:index] do
     resources :dose
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
