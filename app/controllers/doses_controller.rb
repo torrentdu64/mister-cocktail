@@ -1,14 +1,15 @@
 class DosesController < ApplicationController
     def index
-      @ = .scoped
+      @doses = doses.all
     end
 
     def show
-      @ = .find(params[:id])
+      @dose = dose.find(params[:id])
     end
 
     def create
-      @ = .new(params[:])
+      @dose = dose.new(ingredient_params)
+      @dose.save
     end
 
     def update
