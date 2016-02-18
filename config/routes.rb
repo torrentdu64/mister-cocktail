@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'doses/dose'
+
   get 'cocktails/cocktail'
 
   root "pages#home"
