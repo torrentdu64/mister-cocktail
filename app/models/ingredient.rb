@@ -1,5 +1,4 @@
 class Ingredient < ActiveRecord::Base
-  has_many :cocktail
-  validates :name, confirmation: true
-  validates presence: true
+  has_many :doses
+  validates :name, presence: true, uniqueness: true
 end

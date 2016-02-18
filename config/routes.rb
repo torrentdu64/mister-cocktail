@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'cocktails/cocktail'
 
   root "pages#home"
-  resources :cocktail, only: [:index] do
+  resources :cocktail, only: [:index, :show, :create, :destroy] do
     resources :dose
   end
   # The priority is based upon order of creation: first created -> highest priority.
